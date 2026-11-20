@@ -48,10 +48,6 @@ section{position:relative;padding:clamp(90px,12vw,170px) var(--gut)}
 
 /* HERO */
 .hero{min-height:100svh;padding:0;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:radial-gradient(120% 60% at 50% 110%,#3a1206 0%,#1a0b06 40%,var(--char) 75%)}
-.hero-media{position:absolute;inset:0;z-index:0;overflow:hidden}
-.hero-media img{width:100%;height:100%;object-fit:cover;opacity:.55;filter:sepia(.7) saturate(1.6) hue-rotate(-12deg) contrast(1.15);transform-origin:70% 60%;animation:drift 26s ease-in-out infinite alternate}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--char) 8%,rgba(14,12,11,.55) 55%,rgba(14,12,11,.2)),linear-gradient(var(--char),transparent 22%,transparent 60%,#1a0b06)}
-@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.16) translate(-2%,-1%)}}
 .hero-inner{position:relative;z-index:2;flex:1;padding:110px var(--gut) 0;display:grid;grid-template-columns:1fr 330px;gap:40px;align-items:end}
 .hero-copy{order:1}
 .coals{position:relative;z-index:1;width:100%;height:clamp(100px,18vh,180px);display:block;margin-top:-10px;-webkit-mask-image:linear-gradient(transparent,#000 45%);mask-image:linear-gradient(transparent,#000 45%)}
@@ -209,7 +205,6 @@ section{position:relative;padding:clamp(90px,12vw,170px) var(--gut)}
 /* Calm everything for people who switch off motion */
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  .hero-media img{animation:none}
   .hero-title .c{animation:none;color:#FFF1DC;text-shadow:0 0 8px rgba(255,179,107,.9),0 0 40px rgba(255,90,31,.6)}
   .card,.card::before,.metal,.pile .ing,.seats i,.steps li,.steps b{transition:none}
 }
