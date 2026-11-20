@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anantacast — Jewellery Casting</title>
+<meta name="description" content="Anantacast is a jewellery casting house. Lost-wax casting in gold and silver, from your model to finished metal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+<canvas id="embers" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="nav-mark" href="#top">Anantacast</a>
+  <nav class="nav-links" aria-label="Main">
+    <a href="#furnace">The burnout</a>
+    <a href="#cast">What we cast</a>
+    <a href="#metals">Metals</a>
+    <a href="#bench">The process</a>
+  </nav>
+  <a class="btn btn-small" href="#visit">Send an enquiry</a>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-media" aria-hidden="true"><img src="images/molten-gold.jpg" alt=""></div>
+  <div class="hero-inner">
+    <aside class="board" aria-label="In the flask today">
+      <p class="label">In the flask today</p>
+      <ul>
+        <li><span>Yellow gold</span><span class="ph">22K · 18K</span></li>
+        <li><span>Rose gold</span><span class="ph">18K</span></li>
+        <li><span>White gold</span><span class="ph">18K · 14K</span></li>
+        <li><span>Sterling silver</span><span>925</span></li>
+      </ul>
+      <p class="board-foot">Next pour: <span class="ph">Today, 4 pm</span></p>
+    </aside>
+
+    <div class="hero-copy">
+      <p class="label">Jewellery casting · <span class="ph">Mumbai</span></p>
+      <p class="hero-intro">Bring us your wax, your resin print or your CAD file. We invest it, burn it out, and pour it in metal: rings, pendants, bangles and settings, cast clean and ready for your bench.</p>
+      <h1 class="hero-title coal-hero" aria-label="Cast in fire">
+        <span class="line">Cast in</span>
+        <span class="line">Fire.</span>
+      </h1>
+      <div class="hero-cta">
+        <a class="btn" href="#visit">Send a casting enquiry</a>
+        <a class="link" href="#cast">See what we cast</a>
+      </div>
+    </div>
+  </div>
+  <canvas class="coals" id="coals" aria-hidden="true"></canvas>
+</section>
+
+<!-- FURNACE DAY -->
+<section class="furnace" id="furnace">
+  <div class="gauge" aria-hidden="true">
+    <p class="label">Flask temperature</p>
+    <p class="gauge-num"><span id="temp">24</span><span class="deg">°C</span></p>
+    <p class="gauge-stage" id="tempLabel">Hour 00 · Invest</p>
+    <div class="gauge-bar"><i id="tempBar"></i></div>
+  </div>
+  <div class="furnace-body">
+    <header class="sec-head">
+      <p class="label">One burnout, hour by hour</p>
+      <h2 class="coal">The kiln’s day</h2>
+      <p class="sec-intro">Lost-wax casting runs on heat and patience. Here’s how a flask travels through the kiln, from cold plaster to molten metal. <span class="note">Typical figures; every flask, metal and kiln is a little different.</span></p>
+    </header>
+    <ol class="stages">
+      <li class="stage" data-temp="24" data-name="Hour 00 · Invest">
+        <p class="stage-hr">Hour 00</p><h3>Invest</h3>
+        <p>Your wax tree stands in a steel flask. We pour investment plaster around it, pull the air out under vacuum, and let it set hard.</p>
+      </li>
+      <li class="stage" data-temp="150" data-name="Hour 02 · Dewax">
+        <p class="stage-hr">Hour 02</p><h3>Dewax</h3>
+        <p>The flask goes into the kiln upside down. At around 150 °C the wax softens and runs out, leaving a perfect hollow of your piece.</p>
+      </li>
+      <li class="stage" data-temp="370" data-name="Hour 04 · Climb">
+        <p class="stage-hr">Hour 04</p><h3>Climb</h3>
+        <p>A slow climb and a hold. Water leaves the plaster gently so the mould doesn’t crack.</p>
+      </li>
+      <li class="stage" data-temp="730" data-name="Hour 06 · Burnout">
+        <p class="stage-hr">Hour 06</p><h3>Burnout</h3>
+        <p>Full heat. Every last trace of wax and resin burns away and the mould cures hard enough to take metal.</p>
+      </li>
+      <li class="stage" data-temp="590" data-name="Hour 09 · Settle">
+        <p class="stage-hr">Hour 09</p><h3>Settle</h3>
+        <p>The kiln comes down to casting temperature, matched to the metal and how fine the piece is.</p>
+      </li>
+      <li class="stage" data-temp="1060" data-name="Hour 09 · Pour">
+        <p class="stage-hr">Hour 09</p><h3>Pour</h3>
+        <p>The metal melts in the crucible and goes in under vacuum, filling every claw, gallery and letter of the hollow.</p>
+      </li>
+      <li class="stage" data-temp="40" data-name="Hour 10 · Break out">
+        <p class="stage-hr">Hour 10</p><h3>Break out</h3>
+        <p>The flask rests, then hits the water. The plaster bursts away and the tree comes out in metal, ready to be cut and cleaned.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHAT WE CAST -->
+<section class="cast" id="cast">
+  <header class="sec-head">
+    <p class="label">What we cast</p>
+    <h2 class="coal">Metal, by the gram</h2>
+    <p class="sec-intro">Send us models and we send back castings. Casting charges are per gram of finished casting.</p>
+  </header>
+
+  <div class="cards">
+    <article class="card">
+      <p class="card-metal">Gold</p>
+      <h3>Gold casting</h3>
+      <p class="card-sub">Yellow, rose and white</p>
+      <dl>
+        <div><dt>Karat</dt><dd class="ph">22K · 18K · 14K</dd></div>
+        <div><dt>Minimum</dt><dd class="ph">25 g</dd></div>
+      </dl>
+      <p class="price"><span class="ph">₹60</span><small>/ g</small></p>
+    </article>
+    <article class="card">
+      <p class="card-metal">Silver</p>
+      <h3>Silver casting</h3>
+      <p class="card-sub">Sterling, bright and dependable</p>
+      <dl>
+        <div><dt>Purity</dt><dd>925</dd></div>
+        <div><dt>Minimum</dt><dd class="ph">50 g</dd></div>
+      </dl>
+      <p class="price"><span class="ph">₹10</span><small>/ g</small></p>
+    </article>
+    <article class="card">
+      <p class="card-metal">Platinum</p>
+      <h3>Platinum casting</h3>
+      <p class="card-sub">Dense, white, made to last</p>
+      <dl>
+        <div><dt>Purity</dt><dd class="ph">950</dd></div>
+        <div><dt>Minimum</dt><dd class="ph">10 g</dd></div>
+      </dl>
+      <p class="price"><span class="ph">₹350</span><small>/ g</small></p>
+    </article>
+    <article class="card">
+      <p class="card-metal">Brass</p>
+      <h3>Sample casting</h3>
+      <p class="card-sub">Try a design before it goes to gold</p>
+      <dl>
+        <div><dt>Metal</dt><dd class="ph">Brass</dd></div>
+        <div><dt>Minimum</dt><dd class="ph">20 g</dd></div>
+      </dl>
+      <p class="price"><span class="ph">₹5</span><small>/ g</small></p>
+    </article>
+  </div>
+
+  <div class="lists">
+    <div>
+      <h3 class="list-title">Before the pour</h3>
+      <ul class="plain">
+        <li><span>CAD to wax or resin</span><span class="ph">₹1,500 / design</span></li>
+        <li><span>Rubber mould making</span><span class="ph">₹400</span></li>
+        <li><span>Wax injection, per piece</span><span class="ph">₹15 / pc</span></li>
+        <li><span>Treeing and spruing</span><span class="ph">Included</span></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="list-title">After the pour</h3>
+      <ul class="plain">
+        <li><span>Cut-off and sprue cleaning</span><span class="ph">Included</span></li>
+        <li><span>Tumble and pre-polish</span><span class="ph">₹3 / g</span></li>
+        <li><span>Rhodium plating</span><span class="ph">₹40 / pc</span></li>
+        <li><span>Courier back to you</span><span class="ph">At cost</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- METALS + INGOT PILE -->
+<section class="metals" id="metals">
+  <div class="pile-wrap">
+    <svg class="pile" id="pile" viewBox="0 0 420 380" role="img" aria-label="Drawing of a stack of ingots in four metals">
+      <defs>
+        <linearGradient id="gY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#b9781c"/></linearGradient>
+        <linearGradient id="gR" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6b393"/><stop offset="1" stop-color="#a65a3d"/></linearGradient>
+        <linearGradient id="gW" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1ede4"/><stop offset="1" stop-color="#9c978d"/></linearGradient>
+        <linearGradient id="gS" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcdfe3"/><stop offset="1" stop-color="#7d838b"/></linearGradient>
+      </defs>
+      <g id="ingots"></g>
+    </svg>
+  </div>
+  <div class="metals-body">
+    <header class="sec-head">
+      <p class="label">The metals</p>
+      <h2 class="coal">Four colours of fire</h2>
+      <p class="sec-intro">Every karat is pure metal plus an alloy. What goes into that alloy decides the colour, the hardness and how it pours.</p>
+    </header>
+    <div class="metal" data-row="0">
+      <h3>Yellow gold</h3>
+      <p class="metal-tag">Gold + silver + copper</p>
+      <p>The classic. Balanced silver and copper keep the warm colour true. Lovely for bands, kadas and traditional work.</p>
+    </div>
+    <div class="metal" data-row="1">
+      <h3>Rose gold</h3>
+      <p class="metal-tag">Gold + more copper</p>
+      <p>Extra copper blushes the gold pink and makes it a little harder. A favourite for modern rings and fine chains.</p>
+    </div>
+    <div class="metal" data-row="2">
+      <h3>White gold</h3>
+      <p class="metal-tag">Gold + palladium or nickel</p>
+      <p>White metals bleach the gold pale. Usually finished with rhodium plating for a bright white shine around stones.</p>
+    </div>
+    <div class="metal" data-row="3">
+      <h3>Sterling silver</h3>
+      <p class="metal-tag">92.5% silver + 7.5% copper</p>
+      <p>Bright, affordable and quick to work. Perfect for samples, collections and everyday pieces.</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE BENCH: 8 stations -->
+<section class="bench" id="bench">
+  <header class="sec-head center">
+    <p class="label">From your model to metal</p>
+    <h2 class="coal">Eight stations, one bench</h2>
+    <p class="sec-intro">Every piece passes the same eight stations, in the same order, every time.</p>
+  </header>
+  <div class="bench-grid">
+    <div class="table" aria-hidden="true">
+      <div class="seats top"><i>1</i><i>2</i><i>3</i><i>4</i></div>
+      <div class="slab"><img src="images/workbench.jpg" alt="" loading="lazy"></div>
+      <div class="seats bottom"><i>8</i><i>7</i><i>6</i><i>5</i></div>
+    </div>
+    <ol class="steps">
+      <li><b>01</b><span><strong>Model</strong> Your wax, resin print or CAD file arrives.</span></li>
+      <li><b>02</b><span><strong>Tree</strong> Pieces are sprued onto a wax trunk.</span></li>
+      <li><b>03</b><span><strong>Invest</strong> Plaster poured and vacuumed around the tree.</span></li>
+      <li><b>04</b><span><strong>Burnout</strong> The kiln takes the wax away.</span></li>
+      <li><b>05</b><span><strong>Pour</strong> Molten metal fills the hollow.</span></li>
+      <li><b>06</b><span><strong>Quench</strong> Plaster bursts off in water.</span></li>
+      <li><b>07</b><span><strong>Clean</strong> Cut from the tree, sprues trimmed.</span></li>
+      <li><b>08</b><span><strong>Weigh</strong> Checked, weighed and sent back to you.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- PHOTO BAND -->
+<section class="band" aria-label="Quote">
+  <img src="images/torch-on-ring.jpg" alt="A jeweller’s torch flame playing over a gold ring on the bench" loading="lazy">
+  <blockquote>
+    <p>The wax is lost.<br>The metal stays.</p>
+  </blockquote>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <header class="sec-head">
+    <p class="label">Hours · Find us · Enquire</p>
+    <h2 class="coal">Bring us your wax</h2>
+  </header>
+  <div class="visit-grid">
+    <div class="hours">
+      <h3 class="list-title">Workshop hours</h3>
+      <ul class="plain">
+        <li><span>Mon – Fri</span><span class="ph">10 am – 7 pm</span></li>
+        <li><span>Saturday</span><span class="ph">10 am – 5 pm</span></li>
+        <li><span>Sunday</span><span class="ph">Closed</span></li>
+      </ul>
+      <h3 class="list-title">Reach us</h3>
+      <ul class="plain">
+        <li><span>Phone</span><a class="ph" href="tel:+919876543210">+91 98765 43210</a></li>
+        <li><span>WhatsApp</span><a class="ph" href="https://wa.me/919876543210">Message us</a></li>
+        <li><span>Email</span><a class="ph" href="mailto:hello@anantacast.com">hello@anantacast.com</a></li>
+      </ul>
+    </div>
+    <div class="map">
+      <!-- Change the q= part of the map link to your real address. -->
+      <iframe title="Map to the Anantacast workshop" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=Zaveri%20Bazaar%2C%20Mumbai&amp;z=15&amp;output=embed"></iframe>
+      <p class="map-addr ph">Unit 12, Casting Lane, Zaveri Bazaar, Mumbai 400002</p>
+    </div>
+    <form class="enquiry" id="enquiry">
+      <h3 class="list-title">Casting enquiry</h3>
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Phone or email<input name="contact" required></label>
+      <label>Metal
+        <select name="metal">
+          <option>Yellow gold</option><option>Rose gold</option><option>White gold</option><option>Sterling silver</option><option>Not sure yet</option>
+        </select>
+      </label>
+      <label>What are you sending?<textarea name="msg" rows="3" placeholder="e.g. 40 ring waxes, 18K yellow"></textarea></label>
+      <button class="btn" type="submit">Send enquiry</button>
+      <p class="fine">Opens your email app with the details filled in.</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot-name coal-foot" aria-label="Anantacast">Anantacast</p>
+  <div class="foot-row">
+    <span>Jewellery casting · <span class="ph">Mumbai</span></span>
+    <span>© <span id="yr"></span> Anantacast</span>
+    <span>Photos: Unsplash</span>
+  </div>
+</footer>
+
+<script src="script.js?v=5"></script>
+</body>
+</html>
